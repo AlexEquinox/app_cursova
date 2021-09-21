@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   app:
-    image: node:12-alpine
+    image: alex7equinox/node:12-alpine
     command: sh -c "yarn install && yarn run dev"
     ports:
       - 80:3000
@@ -16,7 +16,7 @@ services:
       MYSQL_DB: todos
 
   mysql:
-    image: mysql:5.7
+    image: alex7equinox/mysql:5.7
     volumes:
       - todo-mysql-data:/var/lib/mysql
     environment:
